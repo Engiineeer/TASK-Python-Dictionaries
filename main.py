@@ -2,10 +2,19 @@
 
 
 # Create a function called `change_age` which takes the `person` dictionary and a `number` as arguments, this function changes the age in the dictionary to the `number`. The return value of this function is the updated dictionary.
+person = {
+    "name" : "saud",
+    "age" : 30,
+    "hobbies" : ["sport"]
 
+
+}
 
 def change_age(person, number):
-    ...
+    for person["age"] in person:
+        person["age"] = number
+        return number
+
 
 
 print(change_age(person, 21))
@@ -15,7 +24,8 @@ print(change_age(person, 21))
 
 
 def add_hobby(person, hobby):
-    ...
+    person["hobbies"].append(hobby)
+    return person
 
 
 print(add_hobby(person, "Table Tennis"))
